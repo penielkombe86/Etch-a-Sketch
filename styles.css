@@ -12,11 +12,24 @@ body {
     border: 1px solid black;
 }
 
-.cell {
+.cell, .newCell {
     box-sizing: border-box;
     display: flex;
-    flex: 0 1 calc(100% / 16);
-    height: calc(100% / 16);
     border: 1px solid black;
     background-color: #ffff;
+}
+
+
+.edit-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+input {
+    display: block;
+}
+
+.actions {
+    margin-top: 20px;
 }
