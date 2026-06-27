@@ -27,9 +27,8 @@ function createInitialCells() {
 }
 
 createInitialCells()
-
-// 
-function editGrid() {
+ 
+function editGrid(event) {
     // convert the row and column numbers to integers
     let rowNumber = parseInt(rows.value, 10)
     let columnNumber = parseInt(columns.value, 10)
@@ -56,6 +55,10 @@ function editGrid() {
 gridContainer.addEventListener("mouseover", (event) => {
     if (event.target.classList.contains("cell")) {
         event.target.style.backgroundColor = "red"
+    }
+
+    if (event.target.classList.contains("newCell")) {
+        event.target.style.backgroundColor = "orange"
     }
 })
 
