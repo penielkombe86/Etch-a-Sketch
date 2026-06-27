@@ -7,13 +7,32 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <main>
         <section>
             <div class="grid-container"></div>
         </section>
+        <section>
+            <div class="edit-container">
+                <button id="edit-grid">Edit Grid</button>
+            </div>
+        </section>
+        <section>
+            <dialog id="input-dialog">
+                <form method="dialog" id="popup-form">
+                    <label for="rows">Number of columns:</label>
+                    <input type="number" id="columns">
+
+                    <label for="columns">Number of rows:</label>
+                    <input type="number" id="rows">
+
+                    <div class="actions">
+                        <button id="cancel-btn">Cancel</button>
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </dialog>
+        </section>
     </main>
-    
     <script src="index.js"></script>
 </body>
 </html>
