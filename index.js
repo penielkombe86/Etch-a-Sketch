@@ -67,4 +67,19 @@ editGridBtn.addEventListener("click", (event) => {
     dialog.showModal()
 })
 
-popupForm.addEventListener("submit", editGrid)
+popupForm.addEventListener("submit", () => {
+    if (rows.value.trim() === "" || columns.value.trim() === "") {
+        gridContainer.replaceChildren()
+        createInitialCells()
+    }
+    else {
+        editGrid()
+    }
+})
+
+cancelBtn.addEventListener("click", () => {
+        if (rows.value.trim() === "" || columns.value.trim() === "") {
+        gridContainer.replaceChildren()
+        createInitialCells()
+        }
+})
