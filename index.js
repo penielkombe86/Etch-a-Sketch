@@ -6,6 +6,7 @@ const rows = document.getElementById("rows")
 const columns = document.getElementById("columns")
 const cancelBtn = document.getElementById("cancel-btn")
 const editGridBtn = document.getElementById("edit-grid")
+const color = document.getElementById("color")
 
 const initialRows = 64
 const  initialColumns = 64
@@ -58,7 +59,8 @@ gridContainer.addEventListener("mouseover", (event) => {
     }
 
     if (event.target.classList.contains("newCell")) {
-        event.target.style.backgroundColor = "orange"
+        let newCellColor = color.value
+        event.target.style.backgroundColor = newCellColor
     }
 })
 
@@ -67,7 +69,9 @@ editGridBtn.addEventListener("click", (event) => {
     dialog.showModal()
 })
 
+
 popupForm.addEventListener("submit", () => {
+    // display initial grid when user clicks submit without filling filling the input values
     if (rows.value.trim() === "" || columns.value.trim() === "") {
         gridContainer.replaceChildren()
         createInitialCells()
@@ -77,6 +81,7 @@ popupForm.addEventListener("submit", () => {
     }
 })
 
+// // display initial grid when user clicks submit without filling filling the input values
 cancelBtn.addEventListener("click", () => {
         if (rows.value.trim() === "" || columns.value.trim() === "") {
         gridContainer.replaceChildren()
