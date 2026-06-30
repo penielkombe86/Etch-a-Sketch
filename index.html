@@ -8,6 +8,7 @@
 </head>
 <body>
     <main>
+        <h1>Etch-a-sketch</h1>
         <section>
             <div class="grid-container"></div>
         </section>
@@ -20,10 +21,10 @@
             <dialog id="input-dialog">
                 <form method="dialog" id="popup-form">
                     <label for="rows">Number of columns:</label>
-                    <input type="number" id="columns">
+                    <input type="number" id="columns" max="100" min="1">
 
                     <label for="columns">Number of rows:</label>
-                    <input type="number" id="rows">
+                    <input type="number" id="rows" max="100" min="1">
 
                     <label for="color">Choose color:</label>
                     <input type="color" id="color">
